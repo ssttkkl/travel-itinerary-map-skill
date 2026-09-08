@@ -627,6 +627,7 @@ def build_html(config: dict[str, Any], output_dir: Path) -> Path:
       }});
       const updateFilters = () => {{
         document.querySelectorAll('.map-item').forEach((item) => {{ item.style.display = ''; }});
+        document.querySelectorAll('.map-route').forEach((item) => {{ item.style.display = ''; }});
         document.querySelectorAll('.legend-filter').forEach((box) => {{
           if (!box.checked) {{
             document.querySelectorAll(box.dataset.target).forEach((item) => {{ item.style.display = 'none'; }});
@@ -643,6 +644,7 @@ def build_html(config: dict[str, Any], output_dir: Path) -> Path:
           const path = document.querySelector(`.map-route[data-route-day="${{route.dayClass}}"]`);
           if (!path) return;
           if (!visibleDayClasses.has(route.dayClass)) {{
+            path.style.display = 'none';
             path.setAttribute('d', '');
             return;
           }}
