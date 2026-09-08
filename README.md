@@ -26,6 +26,16 @@ python3 scripts/render_itinerary_map_html.py --input itinerary.json --output-dir
 
 The script writes a standalone `.html` file to the output directory.
 
+## Screenshots
+
+Use Playwright through `scripts/screenshot_itinerary_map_html.mjs` to capture a rendered HTML page:
+
+```bash
+node scripts/screenshot_itinerary_map_html.mjs --url "file:///path/to/map.html?show=day-1&hide=legend,controls&title=10/1%20罗马" --output outputs/day1.png
+```
+
+The screenshot script reads URL query parameters such as `show`, `hide`, `title`, and `subtitle` before capture.
+
 ## Dependencies
 
 ```bash

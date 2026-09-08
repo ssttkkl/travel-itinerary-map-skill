@@ -44,3 +44,7 @@ Field rules:
 - `label_offset` may be added as `[dx, dy]` when labels need manual nudging.
 
 The renderer produces one standalone HTML file. It embeds the map tiles, labels, route overlays, circled sequence labels, per-legend-item visibility checkboxes, and zoom controls directly into the page so the result can be opened as a normal webpage. The page automatically scales the complete map to fit the browser window at the default view, and lets readers zoom in or out from there. When optional or lodging points are hidden, each visible day's route is redrawn through the remaining visible stops in visit order.
+
+Screenshot workflow:
+- Use `scripts/screenshot_itinerary_map_html.mjs` with Playwright.
+- Pass the HTML URL through `--url` and control the capture with query parameters such as `show=day-1`, `show=day-2&hide=legend,controls`, `title=10/1 罗马`, and `subtitle=仅展示当天行程`.
