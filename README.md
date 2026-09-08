@@ -12,7 +12,7 @@ The renderer geocodes real places, embeds OpenStreetMap tiles, labels stops in v
 - Numbered itinerary stops with visit times.
 - Circled numerals in stop information boxes, such as `①`, `②`, `③`.
 - Distinct per-day route color or line style.
-- Optional stops marked as `机动` using the same day color with semi-transparent styling.
+- Optional stops marked as flexible using the same day color with semi-transparent styling.
 - Per-legend checkboxes for days, optional stops, and lodging points.
 - Routes redraw through the remaining visible stops after filtering optional or lodging points.
 - Built-in zoom controls for zooming in, zooming out, and returning to the fitted view.
